@@ -242,3 +242,34 @@ footer a:hover {
         max-width: 500px;
     }
 }
+/* Video Container Styles */
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow videos to wrap on smaller screens */
+}
+
+.video {
+    width: 100%; /* Set the video to take up full width on mobile */
+    max-width: 500px; /* Limit the maximum width for desktop screens */
+    margin-bottom: 20px; /* Add spacing between videos on smaller screens */
+}
+
+.video iframe {
+    width: 100%; /* Make iframe responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column; /* Stack videos vertically */
+        align-items: center; /* Center the videos */
+    }
+
+    .video iframe {
+        height: 250px; /* Adjust height for mobile view */
+    }
+}
+
